@@ -16,11 +16,15 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import '../styles/Navbar.css';
 
 const pages = ['Products'];
-const settings = ['Profile', 'Account'];
+const settings = ['Profile', 'Login'];
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleLogIn = (userMessg) => {
+    userMessg === 'Login' ? window.location.replace('/login') : window.location.replace('/profile');
+  }
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -132,12 +136,11 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
+            <button className="loginBtn" onClick={() => handleLogIn(props.userMessg)}>
+              
+              {props.userMessg}
+            </button>
+            {/* <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -158,7 +161,7 @@ const Navbar = () => {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
         </Toolbar>
       </Container>

@@ -6,3 +6,10 @@
     border: 1px solid gray;
     border-radius: 15px;
 }
+
+.loginBtn {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
