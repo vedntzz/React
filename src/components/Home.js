@@ -5,17 +5,17 @@ const Home = () => {
   return (
     <div id="home">
         <div id="col">
-            <div id="row">
+            <div id="row-1">
                 <div id="box"></div>
                 <div id="box"></div>
                 <div id="box"></div>
             </div>
-            <div id="row">
+            <div id="row-1">
                 <div id="box"></div>
                 <div id="box"></div>
                 <div id="box"></div>
             </div>
-            <div id="row">
+            <div id="row-1">
                 <div id="box"></div>
                 <div id="box"></div>
                 <div id="box"></div>

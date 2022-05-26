@@ -21,11 +21,9 @@ const settings = ['Profile', 'Login'];
 const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const handleLogIn = (userMessg) => {
     userMessg === 'Login' ? window.location.replace('/login') : window.location.replace('/profile');
   }
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -42,27 +40,10 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static">¸
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
+      
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } , marginLeft: '200px'}}>
             <IconButton
@@ -100,29 +81,13 @@ const Navbar = (props) => {
               ))}
             </Menu>
           </Box>
-          <IconButton color="error" aria-label="add to shopping cart">
+          <IconButton color="error" aria-label="add to shopping cart" onClick={() => {
+            window.location.replace('/checkout')
+          }}>
             <AddShoppingCartIcon />
         </IconButton>
         <input className='searchInput' placeholder='Search..'></input>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
+ 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
@@ -140,28 +105,6 @@ const Navbar = (props) => {
               
               {props.userMessg}
             </button>
-            {/* <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
           </Box>
         </Toolbar>
       </Container>
