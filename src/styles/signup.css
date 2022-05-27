@@ -1,18 +1,22 @@
+
+   
 *{
     margin: 0;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 20px;
     box-sizing: border-box;
   }
 
 .container{
     align-items: center;
-    position: static;
-    background: white;
-    padding: 60px 0px;
-    width: 500px;
-    justify-content: space-between;
-    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 25%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: orange;
 }
 header{
     font-size: 40px;
@@ -25,8 +29,16 @@ header{
     height: 50px;
     width: 100%;
 }
+
+.input-field {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .input-field input{
-    margin: 14px;
+    /* margin: 14px;
     padding: 5px 5px;
     align-items: center;
     height: 70%;
@@ -34,7 +46,12 @@ header{
     border: 1px solid silver;
     outline: none;
     font-size: 15px;
-    transition: .4s;
+    transition: .4s; */
+    padding: 10px;
+    margin-top: 30px;
+    width: 300px;
+    border: 1px solid gray;
+    outline: none;
 }
 form .button{
     padding: 5px 5px;
@@ -42,15 +59,14 @@ form .button{
     overflow: hidden;
     z-index: 100;
 }
-.button .inner-btn{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    left: -10%;
-    transition: all .4s;
-    color: red;
-    background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 .button button{
     width: 50%;
     height: 100%;
