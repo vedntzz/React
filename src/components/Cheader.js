@@ -8,8 +8,6 @@ export default function Header(props) {
         <a href="#/">
           <h1>Small Shopping Cart</h1>
         </a>
-   
-   
       </div>
     </header>
   );
