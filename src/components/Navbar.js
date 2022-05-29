@@ -105,7 +105,7 @@ const Navbar = (props) => {
               
               {props.userMessg}
             </button>
-            <button className="signupbtn" onClick = {() => { window.location.replace('/signup')}}> Signup </button>
+            <button className="signupbtn" onClick = {() => { window.location.replace('/signup')}}> Sign up </button>
           </Box>
         </Toolbar>
       </Container>

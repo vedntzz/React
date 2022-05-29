@@ -1,19 +1,23 @@
 .searchInput{
+    display: flex;
     width: 1000px;
     margin-left: 30px;
     margin-right: 30px;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .loginBtn {
+    display: flex;
     border: 1px solid gray;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
 .signupbtn{
+    display: flex;
     border: 1px solid gray;
     padding: 10px;
     border-radius: 10px;
